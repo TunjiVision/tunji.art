@@ -22,6 +22,15 @@
   --maxw:1100px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
+/* section order: RED microdrama promoted above the Short Film */
+body{display:flex;flex-direction:column}
+.hero{order:0}
+#poetry{order:1}
+#micro{order:2}
+#film{order:3}
+#sgil{order:4}
+#about{order:5}
+footer{order:6}
 html{scroll-behavior:smooth}
 body{
   background:var(--ink);
@@ -258,11 +267,11 @@ footer .dots{margin-bottom:14px}
 <body>
 
 <nav>
-  <a class="wordmark" href="#top">tunji<span class="dot"></span><span class="art">art</span></a>
+  <a class="wordmark" href="#top">tunji<span class="dot"></span><span class="art">vision</span></a>
   <ul>
     <li><a class="p" href="#poetry">Poetry</a></li>
-    <li><a class="f" href="#film">Film</a></li>
     <li><a class="m" href="#micro">Microdrama</a></li>
+    <li><a class="f" href="#film">Film</a></li>
     <li><a class="s" href="#sgil">SGIL</a></li>
     <li><a href="#about">About</a></li>
   </ul>
@@ -351,7 +360,7 @@ which one gets let out.</div>
 <section id="film">
   <div class="wrap">
     <div class="tcard reveal">
-      <span class="num">Chapter II</span>
+      <span class="num">Chapter III</span>
       <h2>The <em>Short Film</em></h2>
       <div class="rule"></div>
       <p class="lede">One film, front and centre, with the mess that made it underneath.</p>
@@ -374,7 +383,7 @@ which one gets let out.</div>
 <section id="micro">
   <div class="wrap">
     <div class="tcard reveal">
-      <span class="num">Chapter III</span>
+      <span class="num">Chapter II</span>
       <h2><span class="rednm">RED:</span> <em>The Microdrama</em></h2>
       <div class="rule"></div>
       <p class="lede">A hybrid-animation supernatural soap opera about a clueless girl, a rogue werewolf-hunting grandma, and a dangerously charming man who's about to entangle them all. Ten episodes, built for the phone in your hand.</p>
@@ -447,7 +456,7 @@ which one gets let out.</div>
 
 <footer>
   <div class="dots"><i></i><i></i><i></i><i></i></div>
-  <div class="wordmark" style="font-size:1rem;justify-content:center">tunji<span class="dot"></span><span class="art">art</span></div>
+  <div class="wordmark" style="font-size:1rem;justify-content:center">tunji<span class="dot"></span><span class="art">vision</span></div>
   <div style="margin-top:10px">© 2026 · written, shot &amp; assembled in London</div>
 </footer>
 
