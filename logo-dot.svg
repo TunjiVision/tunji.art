@@ -1,10 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <line x1="32" y1="16" x2="18" y2="4" stroke="#c9cfda" stroke-width="4" stroke-linecap="round"/>
-  <line x1="32" y1="16" x2="46" y2="4" stroke="#c9cfda" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="18" cy="4" r="3.5" fill="#c9cfda"/>
-  <circle cx="46" cy="4" r="3.5" fill="#c9cfda"/>
-  <path d="M32 38 L32 14 A24 24 0 0 1 56 38 Z" fill="#4d8dff"/>
-  <path d="M32 38 L56 38 A24 24 0 0 1 32 62 Z" fill="#ffd23f"/>
-  <path d="M32 38 L32 62 A24 24 0 0 1 8 38 Z" fill="#d62839"/>
-  <path d="M32 38 L8 38 A24 24 0 0 1 32 14 Z" fill="#a78bfa"/>
+  <defs><clipPath id="scr"><rect x="13" y="25" width="30" height="26" rx="5"/></clipPath></defs>
+  <line x1="32" y1="21" x2="18" y2="5" stroke="#c9cfda" stroke-width="4" stroke-linecap="round"/>
+  <line x1="32" y1="21" x2="46" y2="5" stroke="#c9cfda" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="18" cy="5" r="3.5" fill="#c9cfda"/>
+  <circle cx="46" cy="5" r="3.5" fill="#c9cfda"/>
+  <rect x="7" y="19" width="50" height="38" rx="7" fill="#8a5f3c"/>
+  <g clip-path="url(#scr)">
+    <rect x="28" y="25" width="15" height="13" fill="#4d8dff"/>
+    <rect x="28" y="38" width="15" height="13" fill="#ffd23f"/>
+    <rect x="13" y="38" width="15" height="13" fill="#d62839"/>
+    <rect x="13" y="25" width="15" height="13" fill="#a78bfa"/>
+  </g>
+  <circle cx="50" cy="31" r="3" fill="#f5d061"/>
+  <circle cx="50" cy="43" r="3" fill="#f5d061"/>
 </svg>
