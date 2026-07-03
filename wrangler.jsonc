@@ -1,5 +1,10 @@
 {
 "name": "plain-math-e22a",
 "compatibility_date": "2026-07-02",
+"workers_dev": false,
+"routes": [
+{ "pattern": "tunji.art", "custom_domain": true },
+{ "pattern": "www.tunji.art", "custom_domain": true }
+],
 "assets": { "directory": "./", "html_handling": "auto-trailing-slash" }
 }
