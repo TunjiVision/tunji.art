@@ -49,10 +49,15 @@ body::after{
 }
 /* TV screen: rounded corners, bezel line, glass vignette */
 body::before{
-  content:"";position:fixed;inset:12px;pointer-events:none;z-index:998;
-  border-radius:56px;
-  box-shadow:0 0 0 160px #000,inset 0 0 0 2px rgba(201,207,218,.22),inset 0 0 60px rgba(0,0,0,.6),inset 0 0 230px rgba(0,0,0,.75);
+  content:"";position:fixed;left:22px;right:22px;top:86px;bottom:70px;pointer-events:none;z-index:996;
+  border-radius:40px;
+  box-shadow:0 0 0 400px #5f4128,inset 0 0 0 3px rgba(0,0,0,.4),inset 0 0 0 5px rgba(201,207,218,.08),inset 0 0 70px rgba(0,0,0,.6),inset 0 0 240px rgba(0,0,0,.7);
 }
+.tvctl{position:fixed;right:38px;bottom:10px;height:50px;display:flex;align-items:center;gap:18px;z-index:997}
+.tvctl .spk{width:74px;height:26px;border-radius:4px;opacity:.85;background:repeating-linear-gradient(90deg,#4a3119 0 6px,#2e1e0e 6px 10px)}
+.tvctl .knob{width:34px;height:34px;border-radius:50%;position:relative;background:radial-gradient(circle at 35% 30%,#f0e0b8,#b98f45 60%,#7a5a25);box-shadow:0 2px 5px rgba(0,0,0,.5)}
+.tvctl .knob::after{content:"";position:absolute;left:50%;top:4px;width:3px;height:12px;background:#3a2a12;transform:translateX(-50%);border-radius:2px}
+.tvctl .k2{transform:rotate(65deg)}
 h1,h2,h3,.serif{font-family:'Fraunces',serif}
 a{color:inherit;text-decoration:none}
 section{padding:110px 24px}
@@ -60,11 +65,10 @@ section{padding:110px 24px}
 
 /* ---------- NAV ---------- */
 nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
+  position:fixed;top:0;left:0;right:0;z-index:997;
   display:flex;justify-content:space-between;align-items:center;
   padding:18px 28px;
-  background:linear-gradient(to bottom,rgba(16,16,20,.92),rgba(16,16,20,0));
-  backdrop-filter:blur(6px);
+  background:none;
 }
 /* wordmark: small-caps serif, four-colour dot, painter's-brush underline */
 .wordmark{
@@ -84,12 +88,12 @@ nav{
   background:url(/logo-dot.svg) center/contain no-repeat;
 }
 nav ul{display:flex;gap:26px;list-style:none;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
-nav ul a{opacity:.75;transition:.25s}
+nav ul a{opacity:.9;transition:.25s;display:inline-block;background:linear-gradient(180deg,#2b1d12,#160e07);padding:8px 14px;border-radius:7px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 2px 4px rgba(0,0,0,.45)}
 nav ul a:hover{opacity:1}
-nav ul a.m{border-bottom:2px solid var(--red);padding-bottom:3px}
-nav ul a.p{border-bottom:2px solid var(--amber);padding-bottom:3px}
-nav ul a.f{border-bottom:2px solid var(--coral);padding-bottom:3px}
-nav ul a.s{border-bottom:2px solid var(--violet);padding-bottom:3px}
+nav ul a.m{border-bottom:3px solid var(--red)}
+nav ul a.p{border-bottom:3px solid var(--amber)}
+nav ul a.f{border-bottom:3px solid var(--coral)}
+nav ul a.s{border-bottom:3px solid var(--violet)}
 nav ul a.p:hover{color:var(--amber)}
 nav ul a.f:hover{color:var(--coral)}
 nav ul a.m:hover{color:var(--red)}
@@ -114,7 +118,7 @@ nav ul a.s:hover{color:var(--violet)}
   margin-top:34px;max-width:520px;font-size:1.05rem;color:var(--paper-dim);
 }
 .hero .scroll{
-  position:absolute;bottom:38px;left:50%;transform:translateX(-50%);
+  position:absolute;bottom:96px;left:50%;transform:translateX(-50%);
   font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--paper-dim);
   animation:bob 2.4s ease-in-out infinite;
 }
@@ -262,7 +266,7 @@ a.poem{display:block}
 .contact a{border-bottom:1px solid rgba(243,234,217,.3);padding-bottom:3px;transition:.25s}
 .contact a:hover{color:var(--gold);border-color:var(--gold)}
 footer{
-  padding:46px 24px;text-align:center;color:var(--paper-dim);font-size:.78rem;letter-spacing:.1em;
+  padding:46px 24px 100px;text-align:center;color:var(--paper-dim);font-size:.78rem;letter-spacing:.1em;
   border-top:1px solid rgba(243,234,217,.08);
 }
 footer .dots i{display:inline-block;width:8px;height:8px;border-radius:50%;margin:0 4px}
@@ -280,6 +284,10 @@ footer .dots{margin-bottom:14px}
   .poems .poem{flex:0 0 82%;scroll-snap-align:start}
   .bts .cell{flex:0 0 76%;scroll-snap-align:start}
   .promo .cell{flex:0 0 68%;scroll-snap-align:start}
+  body::before{left:8px;right:8px;top:62px;bottom:48px;border-radius:22px}
+  .tvctl{right:14px;bottom:6px;height:36px;gap:10px}
+  .tvctl .knob{width:24px;height:24px}
+  .tvctl .spk{width:48px;height:18px}
 }
 
 /* reveal on scroll: hidden ONLY when JS is confirmed running (html.js). Content is always visible otherwise. */
@@ -479,6 +487,8 @@ which one gets let out.</div>
   <div class="wordmark" style="font-size:1rem;justify-content:center">tunji<span class="dot"></span><span class="art">vision</span></div>
   <div style="margin-top:10px">© 2026 · written, shot &amp; assembled in London</div>
 </footer>
+
+<div class="tvctl"><span class="spk"></span><span class="knob"></span><span class="knob k2"></span></div>
 
 <script>
 document.documentElement.classList.add('js');
