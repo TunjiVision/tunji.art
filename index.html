@@ -187,15 +187,15 @@ a.poem{display:block}
 .feature .ph-label{color:var(--paper-dim);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
 .bts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:26px}
 .bts .cell{
-  aspect-ratio:16/10;border-radius:5px;background:#221a19;border:1px dashed rgba(255,210,63,.35);
-  display:flex;align-items:center;justify-content:center;color:var(--paper-dim);
-  font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:10px;
-  transition:.25s;
+  aspect-ratio:16/9;border-radius:5px;background:#221a19;border:1px solid rgba(255,210,63,.25);
+  overflow:hidden;transition:.25s;
 }
-.bts .cell:hover{border-color:var(--coral);color:var(--coral)}
+.bts .cell iframe{width:100%;height:100%;border:0;display:block}
+.bts .cell:hover{border-color:var(--coral)}
 
 /* ---------- MICRODRAMA ---------- */
-#micro .num,#micro h2 em{color:var(--red)}
+#micro .num{color:var(--red)}
+#micro h2 em{color:var(--paper)}
 .rednm{color:#c1121f}
 #micro .rule{background:var(--red)}
 .episodes{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
@@ -385,9 +385,9 @@ which one gets let out.</div>
       <iframe src="https://www.youtube.com/embed/8V72LHL4OqA" title="Breathe, short film" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <div class="bts">
-      <div class="cell reveal">BTS still 01</div>
-      <div class="cell reveal">BTS still 02</div>
-      <div class="cell reveal">BTS clip · YouTube</div>
+      <div class="cell reveal"><iframe src="https://www.youtube.com/embed/yMFs7cx2XHg" title="Breathe BTS, Vashane interview" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      <div class="cell reveal"><iframe src="https://www.youtube.com/embed/YNdoaybo9vg" title="Breathe BTS, Shannon interview" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      <div class="cell reveal"><iframe src="https://www.youtube.com/embed/pVhXw2QYXhs" title="Breathe BTS, Syed interview" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
     </div>
   </div>
 </section>
