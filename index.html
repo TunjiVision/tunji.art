@@ -265,6 +265,16 @@ footer .dots i:nth-child(3){background:var(--red)}
 footer .dots i:nth-child(4){background:var(--violet)}
 footer .dots{margin-bottom:14px}
 
+/* mobile: swipe the card rows sideways */
+@media(max-width:720px){
+  .episodes,.poems,.bts,.promo{display:flex;overflow-x:auto;gap:16px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:8px}
+  .episodes::-webkit-scrollbar,.poems::-webkit-scrollbar,.bts::-webkit-scrollbar,.promo::-webkit-scrollbar{display:none}
+  .episodes .ep{flex:0 0 68%;scroll-snap-align:start}
+  .poems .poem{flex:0 0 82%;scroll-snap-align:start}
+  .bts .cell{flex:0 0 76%;scroll-snap-align:start}
+  .promo .cell{flex:0 0 68%;scroll-snap-align:start}
+}
+
 /* reveal on scroll: hidden ONLY when JS is confirmed running (html.js). Content is always visible otherwise. */
 .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .js .reveal.on{opacity:1;transform:none}
